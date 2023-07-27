@@ -40,7 +40,7 @@ export default function App() {
   useEffect(() => {
     updateLocationAndTime();
     setInterval(() => setDate(new Date()), 1000);
-    if (hour < 12) {
+    if ((hour < 18) & (hour > 5)) {
       document.body.style.backgroundImage =
         "url(./assets/desktop/bg-image-daytime.jpg)";
     } else {
