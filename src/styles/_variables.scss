@@ -1,0 +1,84 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+//colors
+$black: hsl(0, 0%, 0%);
+$semi-black: hsl(0, 0%, 19%);
+$white: hsl(0, 0%, 100%);
+$background-cover: hsl(0, 0%, 0%, 0.4);
+$gray: hsl(0, 0%, 60%);
+$expand-background-night: hsl(0, 0%, 0%, 0.75);
+$expand-background-day: hsl(0, 0%, 100%, 0.75);
+$border-semi-black: hsl(0, 0%, 19%, 0.25);
+
+//font-weights
+$bold: 700;
+$regular: 400;
+$small: 300;
+//mixins
+@mixin header-one {
+  font-size: 12.5rem;
+  font-weight: $bold;
+  line-height: 12.5rem;
+  letter-spacing: -5px;
+}
+
+@mixin header-two {
+  font-size: 3.5rem;
+  font-weight: $bold;
+  line-height: 4.25rem;
+}
+
+@mixin header-three {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@mixin header-four {
+  font-size: 1.25rem;
+  font-weight: $regular;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@mixin header-five {
+  font-size: 1.125rem;
+  font-weight: $bold;
+  line-height: 1.75rem;
+}
+
+@mixin header-six {
+  font-size: 0.9375rem;
+  font-weight: $regular;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+@mixin body-font {
+  font-size: 1.125rem;
+  font-weight: $regular;
+  line-height: 1.75rem;
+}
+
+@mixin time-zone {
+  font-size: 2.5rem;
+  font-weight: $small;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+
+@mixin button-font {
+  font-family: "Inter", sans-serif;
+  color: $black;
+  font-size: 1rem;
+  font-style: $regular;
+  font-weight: $bold;
+  line-height: 1.75rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}

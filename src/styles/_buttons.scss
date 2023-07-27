@@ -1,0 +1,8 @@
+@mixin button-mixin {
+  width: 9.125rem;
+  height: 3.5rem;
+  border-radius: 28px;
+  background-color: $white;
+  @include button-font;
+  border: none;
+}

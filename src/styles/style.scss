@@ -1,0 +1,216 @@
+@import "variables.scss";
+@import "buttons.scss";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  color: $white;
+  background-image: url("./assets/desktop/bg-image-daytime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//main wrapper
+
+.main-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-cover;
+}
+
+.wrapper {
+  width: 90rem;
+  height: 50rem;
+  padding-top: 3.5rem;
+}
+
+.quote-wrapper {
+  height: 10rem;
+  .quote-top {
+    width: 35rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include body-font;
+    .quote-content {
+      width: 90%;
+    }
+    .quote-icon {
+      margin-top: 0.5rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      &:hover {
+        path {
+          opacity: 1;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+  }
+  .quote-author {
+    @include header-five;
+    margin-top: 0.8125rem;
+  }
+}
+
+.time-wrapper {
+  width: 100%;
+  margin-top: 14.5625rem;
+}
+
+.time-statement {
+  @include header-four;
+  width: 30.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-details {
+  display: flex;
+  align-items: flex-end;
+  .time {
+    @include header-one;
+  }
+
+  .time-zone {
+    @include time-zone;
+    margin-left: 1rem;
+    transform: translate(0, -100%);
+  }
+}
+
+.location-wrapper {
+  @include header-three;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  .button {
+    @include button-mixin;
+  }
+
+  .button-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5625rem 0 1.3125rem;
+    cursor: pointer;
+    &:hover {
+      svg {
+        circle {
+          fill: $gray;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+
+    span {
+      opacity: 0.5;
+    }
+    svg {
+      border-radius: 50%;
+    }
+  }
+}
+
+//main wrapper expand
+.main-wrapper-expand {
+  width: 100%;
+  height: 100vh;
+  background-color: $background-cover;
+}
+
+.wrapper-expand {
+  width: 100%;
+  height: 100vh;
+  padding-top: 3.5rem;
+  display: grid;
+  grid-template-rows: 25rem 1fr;
+}
+
+.main-wrapper-expand-top {
+  width: 90rem;
+  margin: 0 auto;
+  .time-wrapper-expand {
+    padding-top: 1.5rem;
+    margin-top: 0;
+    width: 90rem;
+  }
+}
+
+.expand-wrapper {
+  width: 100vw;
+  background-color: $expand-background-day;
+  backdrop-filter: blur(20.387113571166992px);
+  .expand {
+    width: 90rem;
+    margin: 0 auto;
+    color: $semi-black;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5.875rem;
+    margin-top: 4.625rem;
+  }
+  .expand-container-large {
+    height: 15.75rem;
+  }
+
+  .left {
+    border-right: 1px solid $border-semi-black;
+  }
+  .bottom {
+    margin-top: 2.625rem;
+  }
+
+  .description {
+    @include header-six;
+  }
+  .details {
+    @include header-two;
+  }
+}
+
+.location-wrapper-expand {
+  @include header-three;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  .button {
+    @include button-mixin;
+  }
+
+  .button-less {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.5625rem 0 1.75rem;
+    cursor: pointer;
+    &:hover {
+      svg {
+        circle {
+          fill: $gray;
+          transition: 0.1s ease-out;
+        }
+      }
+    }
+
+    span {
+      opacity: 0.5;
+    }
+    svg {
+      border-radius: 50%;
+    }
+  }
+}
