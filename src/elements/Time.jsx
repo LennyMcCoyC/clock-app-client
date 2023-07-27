@@ -1,7 +1,7 @@
 export function Time({ location, date, hour }) {
   return (
     <div className="time-wrapper time-wrapper-expand">
-      {hour < 12 && hour > 5 ? (
+      {hour < 18 && hour >= 5 ? (
         <div className="time-statement ">
           <svg
             className="sun-icon"
@@ -17,7 +17,7 @@ export function Time({ location, date, hour }) {
           </svg>
           <span>Good Monring, It's currently</span>
         </div>
-      ) : hour >= 12 && hour < 18 ? (
+      ) : hour >= 18 || hour < 5 ? (
         <div className="time-statement ">
           <svg
             className="sun-icon"
