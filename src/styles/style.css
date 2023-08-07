@@ -9,8 +9,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   color: hsl(0, 0%, 100%);
   background-image: url("./assets/desktop/bg-image-daytime.jpg");
   background-size: cover;
@@ -19,7 +18,7 @@ body {
 
 .main-wrapper {
   width: 100%;
-  height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,16 +26,19 @@ body {
 }
 
 .wrapper {
-  width: 90rem;
-  height: 50rem;
-  padding-top: 3.5rem;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 0;
 }
 
 .quote-wrapper {
   height: 10rem;
 }
 .quote-wrapper .quote-top {
-  width: 35rem;
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -64,8 +66,7 @@ body {
 }
 
 .time-wrapper {
-  width: 100%;
-  margin-top: 14.5625rem;
+  margin-top: 20%;
 }
 
 .time-statement {
@@ -74,10 +75,11 @@ body {
   line-height: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  width: 30.4375rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+.time-statement span {
+  margin-left: 1rem;
 }
 
 .time-details {
@@ -105,14 +107,14 @@ body {
   line-height: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .location-wrapper .button {
   width: 9.125rem;
   height: 3.5rem;
-  border-radius: 28px;
+  border-radius: 999px;
   background-color: hsl(0, 0%, 100%);
   font-family: "Inter", sans-serif;
   color: hsl(0, 0%, 0%);
@@ -127,8 +129,8 @@ body {
 .location-wrapper .button-more {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 0.5625rem 0 1.3125rem;
+  justify-content: space-evenly;
+  padding: 0 0.5625rem 0 1rem;
   cursor: pointer;
 }
 .location-wrapper .button-more:hover svg circle {
@@ -144,42 +146,39 @@ body {
 
 .main-wrapper-expand {
   width: 100%;
-  height: 100vh;
   background-color: hsla(0, 0%, 0%, 0.4);
 }
 
 .wrapper-expand {
   width: 100%;
   height: 100vh;
-  padding-top: 3.5rem;
-  display: grid;
-  grid-template-rows: 25rem 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-wrapper-expand-top {
-  width: 90rem;
+  width: 80%;
+  height: 50%;
   margin: 0 auto;
 }
 .main-wrapper-expand-top .time-wrapper-expand {
-  padding-top: 1.5rem;
-  margin-top: 0;
-  width: 90rem;
+  margin-top: 3.5rem;
 }
 
 .expand-wrapper {
-  width: 100vw;
+  height: 50%;
   background-color: hsla(0, 0%, 100%, 0.75);
   -webkit-backdrop-filter: blur(20.3871135712px);
           backdrop-filter: blur(20.3871135712px);
 }
 .expand-wrapper .expand {
-  width: 90rem;
+  width: 80%;
   margin: 0 auto;
   color: hsl(0, 0%, 19%);
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
   gap: 5.875rem;
-  margin-top: 4.625rem;
+  margin-top: 3.5rem;
 }
 .expand-wrapper .expand-container-large {
   height: 15.75rem;
@@ -201,6 +200,7 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 4.25rem;
+  font-size: 3rem;
 }
 
 .location-wrapper-expand {
@@ -209,14 +209,14 @@ body {
   line-height: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-top: 1rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .location-wrapper-expand .button {
   width: 9.125rem;
   height: 3.5rem;
-  border-radius: 28px;
+  border-radius: 999px;
   background-color: hsl(0, 0%, 100%);
   font-family: "Inter", sans-serif;
   color: hsl(0, 0%, 0%);
@@ -231,8 +231,8 @@ body {
 .location-wrapper-expand .button-less {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 0.5625rem 0 1.75rem;
+  justify-content: space-evenly;
+  padding: 0 0.5625rem 0 1rem;
   cursor: pointer;
 }
 .location-wrapper-expand .button-less:hover svg circle {

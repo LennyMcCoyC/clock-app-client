@@ -11,8 +11,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   color: $white;
   background-image: url("./assets/desktop/bg-image-daytime.jpg");
   background-size: cover;
@@ -23,7 +22,7 @@ body {
 
 .main-wrapper {
   width: 100%;
-  height: 100vh;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,15 +30,18 @@ body {
 }
 
 .wrapper {
-  width: 90rem;
-  height: 50rem;
-  padding-top: 3.5rem;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 0;
 }
 
 .quote-wrapper {
   height: 10rem;
   .quote-top {
-    width: 35rem;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -64,18 +66,17 @@ body {
     margin-top: 0.8125rem;
   }
 }
-
 .time-wrapper {
-  width: 100%;
-  margin-top: 14.5625rem;
+  margin-top: 20%;
 }
 
 .time-statement {
   @include header-four;
-  width: 30.4375rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  span {
+    margin-left: 1rem;
+  }
 }
 
 .time-details {
@@ -94,9 +95,9 @@ body {
 
 .location-wrapper {
   @include header-three;
-  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .button {
     @include button-mixin;
   }
@@ -104,9 +105,10 @@ body {
   .button-more {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 0.5625rem 0 1.3125rem;
+    justify-content: space-evenly;
+    padding: 0 0.5625rem 0 1rem;
     cursor: pointer;
+
     &:hover {
       svg {
         circle {
@@ -128,40 +130,41 @@ body {
 //main wrapper expand
 .main-wrapper-expand {
   width: 100%;
-  height: 100vh;
   background-color: $background-cover;
+}
+
+.main-wrapper-expand-top {
 }
 
 .wrapper-expand {
   width: 100%;
   height: 100vh;
-  padding-top: 3.5rem;
-  display: grid;
-  grid-template-rows: 25rem 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-wrapper-expand-top {
-  width: 90rem;
+  width: 80%;
+  height: 50%;
   margin: 0 auto;
+
   .time-wrapper-expand {
-    padding-top: 1.5rem;
-    margin-top: 0;
-    width: 90rem;
+    margin-top: 3.5rem;
   }
 }
 
 .expand-wrapper {
-  width: 100vw;
+  height: 50%;
   background-color: $expand-background-day;
   backdrop-filter: blur(20.387113571166992px);
   .expand {
-    width: 90rem;
+    width: 80%;
     margin: 0 auto;
     color: $semi-black;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.25fr 1fr;
     gap: 5.875rem;
-    margin-top: 4.625rem;
+    margin-top: 3.5rem;
   }
   .expand-container-large {
     height: 15.75rem;
@@ -179,13 +182,14 @@ body {
   }
   .details {
     @include header-two;
+    font-size: 3rem;
   }
 }
 
 .location-wrapper-expand {
   @include header-three;
-  margin-top: 1rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   .button {
     @include button-mixin;
@@ -194,8 +198,8 @@ body {
   .button-less {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 0.5625rem 0 1.75rem;
+    justify-content: space-evenly;
+    padding: 0 0.5625rem 0 1rem;
     cursor: pointer;
     &:hover {
       svg {
