@@ -4,12 +4,32 @@ export function Expand({ location, time, hour }) {
       className="expand-wrapper"
       style={
         hour >= 18 || hour < 5
-          ? { backgroundColor: "rgba(0, 0%, 0%, 0.75)" }
-          : { backgroundColor: "rgba(0, 0%, 100%, 0.75)" }
+          ? {
+              backgroundColor: "hsla(0, 0%, 0%, 0.75)",
+            }
+          : { backgroundColor: "hsla(0, 0%, 100%, 0.75)" }
       }
     >
-      <div className="expand">
-        <div className="expand-container-large left ">
+      <div
+        className="expand"
+        style={
+          hour >= 18 || hour < 5
+            ? {
+                color: "white",
+              }
+            : { color: "hsl(0, 0%, 19%)" }
+        }
+      >
+        <div
+          className="expand-container-large left"
+          style={
+            hour >= 18 || hour < 5
+              ? {
+                  borderRight: "1px solid hsla(0, 0%, 100%, 0.25)",
+                }
+              : { borderRight: "1px solid hsla(0, 0%, 19%, 0.25)" }
+          }
+        >
           <div className="expand-container-small">
             <span className="description">current timezone</span>
             <br />

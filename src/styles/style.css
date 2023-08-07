@@ -167,7 +167,6 @@ body {
 
 .expand-wrapper {
   height: 50%;
-  background-color: hsla(0, 0%, 100%, 0.75);
   -webkit-backdrop-filter: blur(20.3871135712px);
           backdrop-filter: blur(20.3871135712px);
 }
