@@ -7,9 +7,12 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  width: 100%;
   color: hsl(0, 0%, 100%);
   background-image: url("./assets/desktop/bg-image-daytime.jpg");
   background-size: cover;
@@ -19,6 +22,7 @@ body {
 .main-wrapper {
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +39,7 @@ body {
 }
 
 .quote-wrapper {
-  height: 10rem;
+  height: 5rem;
 }
 .quote-wrapper .quote-top {
   width: 100%;
@@ -63,10 +67,6 @@ body {
   font-weight: 700;
   line-height: 1.75rem;
   margin-top: 0.8125rem;
-}
-
-.time-wrapper {
-  margin-top: 20%;
 }
 
 .time-statement {
@@ -243,4 +243,246 @@ body {
 }
 .location-wrapper-expand .button-less svg {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 820px) {
+  .main-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.4);
+  }
+  .wrapper {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 0 4rem 0;
+  }
+  .quote-wrapper {
+    height: 5rem;
+  }
+  .quote-wrapper .quote-top {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  .quote-wrapper .quote-top .quote-content {
+    width: 90%;
+  }
+  .quote-wrapper .quote-top .quote-icon {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  .quote-wrapper .quote-top .quote-icon:hover path {
+    opacity: 1;
+    transition: 0.1s ease-out;
+  }
+  .quote-wrapper .quote-author {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-top: 0.8125rem;
+  }
+  .time-wrapper {
+    margin-top: 20%;
+  }
+  .time-statement {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+  }
+  .time-statement span {
+    margin-left: 1rem;
+  }
+  .time-details {
+    display: flex;
+    align-items: flex-end;
+  }
+  .time-details .time {
+    font-size: 12.5rem;
+    font-weight: 700;
+    line-height: 12.5rem;
+    letter-spacing: -5px;
+    font-size: 10rem;
+  }
+  .time-details .time-zone {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-left: 1rem;
+    transform: translate(0, -100%);
+  }
+  .location-wrapper {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .location-wrapper .button {
+    width: 9.125rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Inter", sans-serif;
+    color: hsl(0, 0%, 0%);
+    font-size: 1rem;
+    font-style: 400;
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 5rem;
+  }
+  .location-wrapper .button-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 0.5625rem 0 1rem;
+    cursor: pointer;
+  }
+  .location-wrapper .button-more:hover svg circle {
+    fill: hsl(0, 0%, 60%);
+    transition: 0.1s ease-out;
+  }
+  .location-wrapper .button-more span {
+    opacity: 0.5;
+  }
+  .location-wrapper .button-more svg {
+    border-radius: 50%;
+  }
+  .main-wrapper-expand {
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.4);
+  }
+  .wrapper-expand {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-wrapper-expand-top {
+    width: 80%;
+    height: 57%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 8rem;
+  }
+  .main-wrapper-expand-top .time-wrapper-expand {
+    margin-top: 0;
+  }
+  .main-wrapper-expand-top .time-wrapper-expand .time {
+    line-height: 10rem;
+  }
+  .expand-wrapper {
+    height: 43%;
+    -webkit-backdrop-filter: blur(20.3871135712px);
+            backdrop-filter: blur(20.3871135712px);
+  }
+  .expand-wrapper .expand {
+    width: 80%;
+    margin: 0 auto;
+    color: hsl(0, 0%, 19%);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+    padding-top: 6.5rem;
+  }
+  .expand-wrapper .expand-container-large {
+    height: 15.75rem;
+  }
+  .expand-wrapper .left {
+    border: none !important;
+  }
+  .expand-wrapper .bottom {
+    margin-top: 2rem;
+  }
+  .expand-wrapper .description {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.81rem;
+  }
+  .expand-wrapper .details {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .expand-wrapper .expand-container-small {
+    height: 7.5rem;
+  }
+  .location-wrapper-expand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .location-wrapper-expand .button {
+    width: 9.125rem;
+    height: 3.5rem;
+    border-radius: 999px;
+    background-color: hsl(0, 0%, 100%);
+    font-family: "Inter", sans-serif;
+    color: hsl(0, 0%, 0%);
+    font-size: 1rem;
+    font-style: 400;
+    font-weight: 700;
+    line-height: 1.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 5rem;
+  }
+  .location-wrapper-expand .button-less {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 0.5625rem 0 1rem;
+    cursor: pointer;
+  }
+  .location-wrapper-expand .button-less:hover svg circle {
+    fill: hsl(0, 0%, 60%);
+    transition: 0.1s ease-out;
+  }
+  .location-wrapper-expand .button-less span {
+    opacity: 0.5;
+  }
+  .location-wrapper-expand .button-less svg {
+    border-radius: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */

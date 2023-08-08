@@ -9,9 +9,12 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  width: 100%;
   color: $white;
   background-image: url("./assets/desktop/bg-image-daytime.jpg");
   background-size: cover;
@@ -23,6 +26,7 @@ body {
 .main-wrapper {
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +43,7 @@ body {
 }
 
 .quote-wrapper {
-  height: 10rem;
+  height: 5rem;
   .quote-top {
     width: 100%;
     display: flex;
@@ -65,9 +69,6 @@ body {
     @include header-five;
     margin-top: 0.8125rem;
   }
-}
-.time-wrapper {
-  margin-top: 20%;
 }
 
 .time-statement {
@@ -214,6 +215,229 @@ body {
     }
     svg {
       border-radius: 50%;
+    }
+  }
+}
+
+//////tablet
+///
+///
+@media screen and (max-width: 820px) {
+  .main-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $background-cover;
+  }
+
+  .wrapper {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 0 4rem 0;
+  }
+
+  .quote-wrapper {
+    height: 5rem;
+    .quote-top {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include body-font;
+      .quote-content {
+        width: 90%;
+      }
+      .quote-icon {
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        &:hover {
+          path {
+            opacity: 1;
+            transition: 0.1s ease-out;
+          }
+        }
+      }
+    }
+    .quote-author {
+      @include header-five;
+      margin-top: 0.8125rem;
+    }
+  }
+  .time-wrapper {
+    margin-top: 20%;
+  }
+
+  .time-statement {
+    @include header-four;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 1rem;
+    }
+  }
+
+  .time-details {
+    display: flex;
+    align-items: flex-end;
+    .time {
+      @include header-one;
+      font-size: 10rem;
+    }
+
+    .time-zone {
+      @include time-zone;
+      font-size: 2rem;
+      margin-left: 1rem;
+      transform: translate(0, -100%);
+    }
+  }
+
+  .location-wrapper {
+    @include header-three;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .button {
+      @include button-mixin;
+      margin-top: 5rem;
+    }
+
+    .button-more {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 0.5625rem 0 1rem;
+      cursor: pointer;
+
+      &:hover {
+        svg {
+          circle {
+            fill: $gray;
+            transition: 0.1s ease-out;
+          }
+        }
+      }
+
+      span {
+        opacity: 0.5;
+      }
+      svg {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  //main wrapper expand
+  .main-wrapper-expand {
+    width: 100%;
+    background-color: $background-cover;
+  }
+
+  .wrapper-expand {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-wrapper-expand-top {
+    width: 80%;
+    height: 57%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 8rem;
+
+    .time-wrapper-expand {
+      margin-top: 0;
+      .time {
+        line-height: 10rem;
+      }
+    }
+  }
+
+  .expand-wrapper {
+    height: 43%;
+    backdrop-filter: blur(20.387113571166992px);
+    .expand {
+      width: 80%;
+      margin: 0 auto;
+      color: $semi-black;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 5rem;
+      padding-top: 6.5rem;
+    }
+    .expand-container-large {
+      height: 15.75rem;
+    }
+    .left {
+      border: none !important;
+    }
+    .bottom {
+      margin-top: 2rem;
+    }
+
+    .description {
+      @include header-six;
+      font-size: 0.81rem;
+    }
+    .details {
+      @include header-two;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    .expand-container-small {
+      height: 7.5rem;
+    }
+  }
+
+  .location-wrapper-expand {
+    @include header-three;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    .button {
+      @include button-mixin;
+      margin-top: 5rem;
+    }
+
+    .button-less {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 0.5625rem 0 1rem;
+      cursor: pointer;
+      &:hover {
+        svg {
+          circle {
+            fill: $gray;
+            transition: 0.1s ease-out;
+          }
+        }
+      }
+
+      span {
+        opacity: 0.5;
+      }
+      svg {
+        border-radius: 50%;
+      }
     }
   }
 }

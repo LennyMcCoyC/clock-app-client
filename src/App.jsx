@@ -57,10 +57,12 @@ export default function App() {
         <div className="main-wrapper">
           <div className="wrapper">
             <Quote />
-            <Time location={location} date={date} hour={hour} />
-            <div className="location-wrapper">
-              <Location location={location} />
-              <Button more={more} setMore={setMore} />
+            <div className="time-location-wrapper">
+              <Time location={location} date={date} hour={hour} />
+              <div className="location-wrapper">
+                <Location location={location} />
+                <Button more={more} setMore={setMore} />
+              </div>
             </div>
           </div>
         </div>
@@ -68,13 +70,15 @@ export default function App() {
         <div className="main-wrapper-expand">
           <div className="wrapper-expand">
             <div className="main-wrapper-expand-top">
-              <Time location={location} date={date} hour={hour} />
-              <div
-                className="location-wrapper-expand
+              <div className="time-location-wrapper-expand">
+                <Time location={location} date={date} hour={hour} />
+                <div
+                  className="location-wrapper-expand
               "
-              >
-                <Location location={location} />
-                <Button more={more} setMore={setMore} />
+                >
+                  <Location location={location} />
+                  <Button more={more} setMore={setMore} />
+                </div>
               </div>
             </div>
             <Expand location={location} time={time} hour={hour} />
